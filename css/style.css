@@ -1,0 +1,210 @@
+@font-face{
+    font-family: 'Zig';
+    src: url(zig.regular.ttf)
+}
+*{
+    max-width: 100%;
+    max-height: 100%;
+}
+body{
+    font-family: 'Zig';
+    background-color: #585656;
+ 
+}
+/*  === WINDOW CONTAINER PROPERTIES */
+
+.container-window{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 20%;
+    align-items: center;
+}
+.window{
+    background-color: white;
+    height: 60%;
+    width: 90%;
+    min-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.3em;
+    
+   
+}
+header{
+    background-color: black;
+    color: white;
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 1.6vw;
+    border: 2px solid white;
+    width: 100%;
+    height:auto;
+    min-height:fit-content;
+    max-height: max-content;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+  }
+
+  #header-button{
+  color: white;
+  border:none;
+  font-size: 1.5vw;
+  background-color: black;
+  font-size: 2vw;
+  }
+
+ul{
+  width: 70%;
+  display: flex;
+  padding: 0.3em;
+  font-size: 0.7em;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+nav{
+  background-color: white;
+  border-bottom: 2px solid black;
+  width: 100%;
+  font-size: 2.5vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.text-Content{
+  font-size: 2.5vw;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+.window-subContainer{
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
+.window-content{
+  border: 1px solid black;
+  margin: 5em 4em;
+  padding: 10em 2em;
+}
+
+
+/* ==== SCROLLBAR CUSTOM */
+/* width */
+::-webkit-scrollbar {
+  width: 1.4em;
+}
+::-webkit-scrollbar-button:single-button{
+  width: 1.4em;
+  height: 3%;
+  display: block;
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  border: 1px solid black;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+
+  border: 3px solid black;
+  background-color: white;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(9, 9, 9); 
+  
+}
+
+/* Handle on hover */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======== WINDOW ANIMATIONS =========*/
+.reduce-reverse{
+max-height: 100%;
+transition: max-height 1s ease;
+
+}
+
+.reduce{
+max-height: 0%;
+transition: max-height 1s ease;
+
+
+}
+
+
+
+
+
+
+/* TABLETTE */
+ @media (min-width: 540px) {
+    .window{
+        background-color: rgb(172, 20, 20);
+        height: 60vh;
+        width: 20vh;
+    }
+
+
+
+    .text-Content{
+      font-size: 2vw;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+    }
+    
+} 
+
+
+
+/*DESKTOP */
+ @media (min-width: 62rem) {
+  .window{
+    background-color: rgb(45, 1, 111);
+    height: 80vh;
+    width: 20vh;
+}
+
+  .reduce{
+  max-height: 4vh;
+  
+  transition: max-height 1s ease;
+  }
+
+
+  .text-Content{
+    font-size: 1.5vw;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+  }
+    
+}
+
+
+
+
+
+
