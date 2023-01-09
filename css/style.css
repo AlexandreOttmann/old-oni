@@ -5,12 +5,18 @@
 *{
     max-width: 100%;
     max-height: 100%;
+    
 }
 body{
+  
+  background-color: #585656;
+  height: 100vh;
+  background:linear-gradient(black, black), no-repeat url('https://wallpapercave.com/dwp1x/wp2625444.jpg') center;
+  background-size: cover;
     font-family: 'Zig';
-    background-color: #585656;
- 
-}
+    background-blend-mode: saturation;
+  }
+main{height: 100vh;}
 /*  === WINDOW CONTAINER PROPERTIES */
 
 .container-window{
@@ -20,6 +26,7 @@ body{
     flex-direction: column;
     margin-top: 20%;
     align-items: center;
+    
 }
 .window{
     background-color: white;
@@ -40,7 +47,7 @@ header{
     color: white;
     padding: 1em 1em 0.5em 1em;
     font-size: 1.6vw;
-    border: 2px solid white;
+    border: 1px solid white;
     width: 100%;
     height:auto;
     min-height:fit-content;
@@ -51,7 +58,8 @@ header{
     align-items: center;
     border-top-left-radius: 0.3rem;
     border-top-right-radius: 0.3rem;
-    border: 1px solid black;
+    /* border-left: 3px solid rgb(255, 255, 255); */
+    /* border-right: 3px solid rgb(255, 255, 255); */
   }
 
   #header-button{
@@ -85,7 +93,6 @@ nav{
 .old-oni-img{
 width:1.6em;
 padding: 0.2em
-
 }
 
 
@@ -100,7 +107,7 @@ padding: 0.2em
   height: 100%;
   overflow-y: scroll;
   scroll-behavior: smooth;
- border: 3px solid black;
+  border: 3px solid black;
   display: flex;
   justify-content: space-between;
 }
@@ -119,15 +126,77 @@ padding: 0.2em
   width: 100%;
   height: 20vh;
   text-align:left;
+  margin-top: 2em;
 }
 .window-content{
-  margin-top: 2em;
-  border: 1px solid black;
+  margin: 2em 0 0 0;
+  border: 4px solid black;
   width: 60%;
-  padding: 10em 2em;
+  height: 50%;
+  padding: 8em 2em;
+  background: no-repeat url('https://media2.giphy.com/media/J6JazAkCVLId91L4yM/giphy.gif?cid=ecf05e47nhdtl9nhyeoo00xnpvkpvp21ppyigy4nwlypfcnp&rid=giphy.gif&ct=g');
+}
+.text-preview{
+  margin-bottom: 2em;
+  text-align: left;
+  width:60%;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.redirection-button{
+  color: white;
+  background-color: #000000;
+  border-radius: 10em;
+  font-size: 0.8em;
+  font-family: 'Zig';
+  padding: 0.5em 1em;
+  margin: 0 0.3em;
+}
+.redirection-button{
+  transform: size(95%);
+}
+/* .button-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+} */
+.redirection-button:hover{
+  transform: scale(105%);
+  transition: transform 0.5s ease;
+}
+
+.redirection-button:active{
+  transform: scale(90%);
+  transition: transform 0.5s ease;
 }
 
 
+.voidButton{
+  background-color: #000000;
+  border-radius: 1rem;
+  color: white;
+  font-size: 2em;
+  position: absolute;
+  width: fit-content;
+  top: 40%;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  bottom: 50%;
+  box-shadow: 5px 5px 0px 1px white inset;
+}
+
+.voidButton.active{
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+
+}
 
 /* ==== SCROLLBAR CUSTOM */
 /* width */
@@ -204,9 +273,26 @@ transition: max-height 1s ease;
 }
 
 .reduce{
-max-height: 2.5vh;
-transition: max-height 1s ease;
+max-height: 0rem;
+transition: max-height  1s ease;
 }
+
+.expand{
+  max-height: 100%;
+  transition: max-height 1s ease;
+  
+  }
+  
+  .expand-reverse{
+  height: 200vh;
+  width: 100%;
+  }
+
+  .expansion{
+    margin-top: 0;
+    width: auto;
+    height: 100vh;
+  }
 
 
 
@@ -222,11 +308,28 @@ transition: max-height 1s ease;
     }
 
 
-
     .text-Content{
       font-size: 2vw;
       font-weight: bold;
       letter-spacing: 0.02em;
+    }
+    .expand-reverse{
+      height: 200vh;
+      width: 100%;
+      }
+    
+      .expansion{
+        margin-top: 0;
+        width: auto;
+        height: 100vh;
+      }
+    
+
+    .window-content{
+      
+      max-width: 40%;
+      min-width: 40%;
+      height: 30%;
     }
     
 } 
@@ -236,7 +339,7 @@ transition: max-height 1s ease;
 /*DESKTOP */
  @media (min-width: 62rem) {
   .window{
-    background-color: rgb(195, 195, 195);
+    background-color: rgb(255, 255, 255);
     height: 80vh;
     width: 20vh;
 }
@@ -247,6 +350,13 @@ transition: max-height 1s ease;
   transition: max-height 1s ease;
   }
 
+  .window-content{
+      
+    max-width: 40%;
+    min-width: 40%;
+    height: 30%;
+  }
+
 
   .text-Content{
     font-size: 1.5vw;
@@ -254,6 +364,17 @@ transition: max-height 1s ease;
     letter-spacing: 0.02em;
   }
     
+  .expand-reverse{
+    height: 200vh;
+    width: 100%;
+    }
+  
+    .expansion{
+      margin-top: 0;
+      width: auto;
+      height: 100vh;
+    }
+  
 }
 
 
