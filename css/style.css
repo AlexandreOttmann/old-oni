@@ -301,6 +301,17 @@ transition: max-height  1s ease;
 
 /* TABLETTE */
  @media (min-width: 540px) {
+
+
+
+
+  .container-window{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 9%;
+  }
     .window{
         background-color: rgb(215, 215, 215);
         height: 60vh;
@@ -338,6 +349,19 @@ transition: max-height  1s ease;
 
 /*DESKTOP */
  @media (min-width: 62rem) {
+
+
+
+
+  .container-window{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 5%;
+
+
+  }
   .window{
     background-color: rgb(255, 255, 255);
     height: 80vh;
